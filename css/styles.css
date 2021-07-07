@@ -234,6 +234,10 @@ a {
   color: #fff;
 }
 
+.btn--stretched {
+  padding-left: 6rem;
+  padding-right: 6rem;
+}
 .btn--block {
   display: inline-block;
   flex-direction: row;
@@ -445,6 +449,7 @@ a {
   }
 }
 
+/* TODO: fix margin left from 6rem on mobile, also fix media__Body deisplay on quote */
 /* Testimonials */
 .testimonial {
   padding: 3rem;
@@ -475,5 +480,44 @@ a {
   }
   .testimonial .quote {
     margin-left: 6rem;
+  }
+}
+
+/* Callouts */
+.callout {
+  padding: 4rem;
+  border-radius: 5px;
+}
+.callout__content {
+  text-align: center;
+}
+
+.callout--primary {
+  background: var(--color-primary);
+  color: #fff;
+}
+
+.callout__header {
+  margin-top: 0;
+  color: #fff;
+}
+
+.callout .btn {
+  justify-self: center;
+  align-self: center;
+}
+
+@media screen and (min-width: 768px) {
+  .callout .grid--1x2 {
+    grid-template-columns: 1fr auto;
+  }
+
+  .callout__content {
+    text-align: left;
+  }
+
+  .callout .btn {
+    justify-self: start;
+    margin: 0 2rem;
   }
 }
