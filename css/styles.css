@@ -473,7 +473,7 @@ a {
   }
 }
 
-/* TODO: fix margin left from 6rem on mobile, also fix media__Body deisplay on quote */
+
 /* Testimonials */
 .testimonial {
   padding: 3rem;
@@ -483,15 +483,15 @@ a {
   width: 60px;
   height: 60px;
 }
-.testimonial__image--container {
+.testimonial__image {
   position: relative;
 }
 
-.testimonial__image--container .testimonial__image {
+.testimonial__image > img{
   width: 100%;
 }
 
-.testimonial__image--container > .icon-container {
+.testimonial__image > .icon-container {
   position: absolute;
   top: 3rem;
   right: -30px;
@@ -499,7 +499,7 @@ a {
 
 @media screen and (min-width: 76px) {
   .testimonial .quote,
-  .testimonial.quote__author {
+  .testimonial .quote__author {
     font-size: 2.4rem;
   }
   .testimonial .quote {
