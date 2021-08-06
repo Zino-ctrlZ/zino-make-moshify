@@ -171,6 +171,7 @@ a {
 
 .icon--white {
   fill: #fff;
+  color: #fff;
 }
 
 .icon-container {
@@ -187,7 +188,9 @@ a {
   background: var(--color-accent);
 }
 
-
+.icon-container .icon--font-awesome {
+  position: absolute;
+}
 
 /* buttons */
 .btn {
@@ -198,7 +201,7 @@ a {
   font-weight: 600;
   margin: 1rem 0;
   outline: 0;
-  padding: 2rem 3rem;
+  padding: 2rem 4vw;
   text-align: center;
   text-transform: uppercase;
   white-space: nowrap;
@@ -283,6 +286,7 @@ a {
   border: 0;
   flex-grow: 1;
   padding: 1.5rem 2rem;
+  width: 0;
 }
 
 .input-group .btn {
@@ -411,6 +415,10 @@ a {
   margin-top: 2rem;
 }
 
+.media__image .icon {
+  color: var(--color-primary);
+}
+
 /* Quote */
 .quote {
   font-size: 3rem;
@@ -439,6 +447,7 @@ a {
   margin-top: 0;
   margin-bottom: 0.5rem;
 }
+
 .quote .quote__company {
   font-size: 2rem;
   opacity: 0.4;
@@ -475,7 +484,6 @@ a {
   }
 }
 
-
 /* Testimonials */
 .testimonial {
   padding: 3rem;
@@ -489,7 +497,7 @@ a {
   position: relative;
 }
 
-.testimonial__image > img{
+.testimonial__image > img {
   width: 100%;
 }
 
@@ -532,6 +540,12 @@ a {
   justify-self: center;
   align-self: center;
 }
+.container .callout--footer {
+  max-width: 980px;
+  position: relative;
+  margin: 2rem;
+  bottom: -4rem;
+}
 
 @media screen and (min-width: 768px) {
   .callout .grid--1x2 {
@@ -545,6 +559,10 @@ a {
   .callout .btn {
     justify-self: start;
     margin: 0 2rem;
+  }
+
+  .container .callout--footer {
+    margin: auto;
   }
 }
 
@@ -565,7 +583,7 @@ a {
   transition: transform 0.3s;
 }
 
-.collapsible__arrow{
+.collapsible__arrow {
   transform: rotate(-90deg);
   transition: transform 0.3s;
 }
@@ -581,8 +599,8 @@ a {
   transform: rotate(0);
 }
 
-.collapsible--expanded .collapsible__arrow{
-  transform: rotate(0)
+.collapsible--expanded .collapsible__arrow {
+  transform: rotate(0);
 }
 .collapsible--expanded .collapsible__content {
   max-height: 100vh;
@@ -615,7 +633,7 @@ a {
 }
 
 .block--skewed-right {
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 95%);
   padding-bottom: calc(var(--padding-vertical) + 4rem);
 }
 
@@ -692,9 +710,7 @@ a {
 }
 
 /* Hero */
-.hero {
-  clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
-}
+
 .hero__tagline {
   font-size: 2rem;
   color: #b9c3cf;
@@ -707,12 +723,15 @@ a {
 }
 
 @media screen and (min-width: 768px) {
-  .hero {
-    padding-top: 0;
-  }
   .hero__content {
     text-align: left;
     align-self: center;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .hero {
+    padding-top: 0;
   }
 }
 
@@ -726,7 +745,7 @@ a {
 
 .block-domain__prices {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 6rem);
   font-size: 2rem;
   font-weight: 600;
@@ -793,7 +812,7 @@ a {
 }
 
 /* footer */
-.footer{
+.footer {
   background: #232323;
 }
 
@@ -802,66 +821,66 @@ a {
   transition: 0.3s;
 }
 
-.footer a:hover{
+.footer a:hover {
   color: #fff;
 }
 
-.footer__section{
+.footer__section {
   padding: 2rem;
   border-bottom: 1px solid #393939;
 }
 
-.footer__section .list{
+.footer__section .list {
   margin: 0;
 }
 
-.footer__heading{
+.footer__heading {
   text-transform: uppercase;
   font-weight: 600;
 }
 
-.footer__brand{
+.footer__brand {
   margin-top: 5rem;
   text-align: center;
 }
 
-.footer__brand img{
+.footer__brand img {
   width: 100%;
 }
 .footer__copyright {
   font-size: 2.1rem;
   color: #fff;
-  opacity: .3;
+  opacity: 0.3;
 }
 
-@media screen and (min-width: 768px){
-  .footer__sections{
+@media screen and (min-width: 768px) {
+  .footer__sections {
     grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
   }
 
-  .footer .collapsible__arrow{
+  .footer .collapsible__arrow {
     display: none;
   }
 
-  .footer .collapsible__content{
+  .footer .collapsible__content {
     opacity: 1;
     max-height: 100%;
   }
 
-  .footer__brand{
+  .footer__brand {
     order: -1;
     margin-top: 1rem;
   }
 
-  .footer__copyright{
+  .footer__copyright {
     font-size: 1.5rem;
   }
 
-  .footer__selection{
+  .footer__selection {
     border: 0;
   }
 
-  .footer__heading{
+  .footer__heading {
     font-size: 1.6rem;
   }
 }
